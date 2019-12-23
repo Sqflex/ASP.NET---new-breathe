@@ -1,0 +1,41 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <section class="main-header ">
+        <header class="header container row">
+            <div class="logo">
+                <a href=""> <h1>1X BET</h1></a>
+            </div>
+            <ul class="nav">
+                <li> <a href="#"><span class="homelink">Home</span></a></li>
+                <li><a href="#"><span class="link">Projects</span></a></li>
+                <li><a href="#"><span class="link">Measurement</span></a></li>
+                <li><a href="#"><span class="link">Team</span></a></li>
+                <li><a href="#"><span class="link">Reviews</span></a></li>
+                <li><a href="#"><span class="Contactslink">Contacts</span></a></li>
+            </ul>
+            <div class="telephone">
+                <a href="tel:+7 (928) 768-32-39" style="color: #E3B873">+7 (928) 768-32-39</a>
+            </div>
+            <div class="request">
+                <a href="" style="color: white">Request A Call</a>
+            </div>
+        </header>
+    </section>
+    <div>
+        @RenderBody()
+    </div>
+    <footer class="container">
+        <p class="float-right"><a href="#">Back to top</a></p>
+        <p>© 2017-2019 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+    <script src="~/js/bootstrap.min.js"></script>
+</body>
+</html>
