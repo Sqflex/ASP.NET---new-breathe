@@ -42,3 +42,4 @@ D:\ASP\ShopAppNew\ShopAppNew\ShopAppNew\obj\Debug\netcoreapp2.2\Razor\Views\Role
 D:\ASP\ShopAppNew\ShopAppNew\ShopAppNew\obj\Debug\netcoreapp2.2\Razor\Views\Roles\Edit.cshtml.g.cs
 D:\ASP\ShopAppNew\ShopAppNew\ShopAppNew\obj\Debug\netcoreapp2.2\Razor\Views\Roles\Index.cshtml.g.cs
 D:\ASP\ShopAppNew\ShopAppNew\ShopAppNew\obj\Debug\netcoreapp2.2\Razor\Views\Roles\UserList.cshtml.g.cs
+D:\ASP\ShopAppNew\ShopAppNew\ShopAppNew\obj\Debug\netcoreapp2.2\Razor\Views\BetsPages\Navi.cshtml.g.cs

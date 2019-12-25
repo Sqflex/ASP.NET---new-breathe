@@ -6,9 +6,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
 using ShopAppNew.interfaces;
+using ShopAppNew.Logs;
 using ShopAppNew.Models;
 using ShopAppNew.Repository;
+using System.IO;
 
 namespace ShopAppNew
 {
@@ -49,8 +52,43 @@ namespace ShopAppNew
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+        public void Configure(IApplicationBuilder app, IHostingEnvironment env, ILogger<Startup> logger, ILoggerFactory loggerFactory)
         {
+            // Записываем логи в файл
+            /*loggerFactory.AddFile(Path.Combine(Directory.GetCurrentDirectory(), "logger.txt"));
+            var logg = loggerFactory.CreateLogger("FileLogger");
+
+            app.Run(async (context) =>
+            {
+                logg.LogInformation("Processing request {0}", context.Request.Path);
+                await context.Response.WriteAsync("Hello World!");
+            }); */
+            // Логирование в консоль
+            /* app.Run(async (context) => 
+             {
+                 // пишем на консоль информацию
+                 logger.LogInformation("Processing request {0}", context.Request.Path);
+                 //или так
+                 //logger.LogInformation($"Processing request {context.Request.Path}");
+
+                 await context.Response.WriteAsync("1X BET!");
+             }); */
+            //Фабрика Логерра
+            /* var loggerFactory = LoggerFactory.Create(builder =>
+             {
+                 builder.AddConsole();
+                 builder.AddDebug(); //Output вижлы
+                 // настройка фильтров
+                 builder.AddFilter("System", LogLevel.Debug)
+                 .AddFilter<DebugLoggerProvider>("Microsoft", LogLevel.Trace);
+             });
+             ILogger logger = loggerFactory.CreateLogger<Startup>();
+             app.Run(async (context) =>
+             {
+                 logger.LogInformation("Requested Path: {0}", context.Request.Path);
+                 await context.Response.WriteAsync("1X BET!");
+             }); */
+
             // Подключение бд с категориями и ставками
             app.UseDeveloperExceptionPage();
             app.UseStatusCodePages();
@@ -64,8 +102,6 @@ namespace ShopAppNew
             }
             // Подключение бд пользователей
             app.UseDeveloperExceptionPage();
-
-            app.UseHttpsRedirection();
             app.UseStaticFiles();
 
             app.UseAuthentication();    // подключение аутентификации

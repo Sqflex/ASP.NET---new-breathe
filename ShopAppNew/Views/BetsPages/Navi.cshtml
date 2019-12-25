@@ -1,0 +1,27 @@
+﻿@model ShopAppNew.ViewModels.CarsListViewModel;
+
+    <div class="mt-5 ml-5">
+        @{
+                    int i = 0;
+                    foreach (var car in Model.allCars)
+                    {
+                        if (i == 0)
+                        {
+                <div class="col-lg-10">
+                    <img class="img-thumbnail" src="@car.img" alt="@car.name" />
+                    <h3>Событие: @car.name</h3>
+                    <p>Краткое описание: @car.shortDesc</p>
+                    <p>Призовой фонд: @car.price.ToString("c")</p>
+                    <p><a class="btn" btn-warning" href="#">Подробнее:</a></p>
+                    <p style="display: flex; ">Коэффициент Navi: 0.5</p>
+                    <p style="display: flex; ">Коэффициент Envy: 0.5</p>
+                    <div class="request">
+                        <a href="#" style="color: white; margin-bottom: 25px;">Сделать ставку</a>
+                    </div>
+                </div>
+                    i = 1;
+                }
+
+        }
+        }
+    </div>
