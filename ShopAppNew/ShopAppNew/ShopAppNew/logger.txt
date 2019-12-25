@@ -1,0 +1,21 @@
+Entity Framework Core 2.2.6-servicing-10079 initialized 'AppDBContent' using provider 'Microsoft.EntityFrameworkCore.SqlServer' with options: None
+Executed DbCommand (1,287ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Category] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+Executed DbCommand (102ms) [Parameters=[], CommandType='Text', CommandTimeout='30']
+SELECT CASE
+    WHEN EXISTS (
+        SELECT 1
+        FROM [Car] AS [c])
+    THEN CAST(1 AS BIT) ELSE CAST(0 AS BIT)
+END
+Request starting HTTP/2.0 GET https://localhost:44336/  
+Processing request /
+Request finished in 232.0003ms 200 
+Request starting HTTP/2.0 GET https://localhost:44336/Cars/List  
+Processing request /Cars/List
+Request finished in 72.2106ms 200 

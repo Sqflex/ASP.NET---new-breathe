@@ -1,0 +1,157 @@
+﻿/* reset */
+body {
+    font-family: 'FuturaDemiC','Orbitron', serif;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    line-height: 1;
+    color: #a59797;
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    padding: 0;
+    margin: 0;
+}
+
+figure {
+    margin: 0;
+}
+
+body {
+    font-family: 'FuturaDemiC',sans-serif, Helvetica;
+    font-size: 14px;
+}
+
+h1 {
+    color: red;
+}
+
+/* --------------------container ---------------- */
+
+.container {
+    max-width: 1440px;
+}
+
+/* --------------------------Header--------------------- */
+
+.row {
+    display: $flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.main-header {
+    background-color: #000000;
+    background-size: cover;
+}
+
+.logo {
+    display: $flex;
+    align-items: center;
+    margin-top: 0.36%;
+    margin-left: 81px;
+}
+
+    .logo h1 {
+        font-family: 'FuturaDemiC', Arial, Helvetica, serif;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #E3B873;
+    }
+
+/*=========================================nav==================================*/
+
+.nav {
+    display: $flex;
+    width: 50%;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0.5%;
+}
+
+    .nav a {
+        font-family: 'FuturaDemiC', Arial, Helvetica, serif;
+        font-size: 14px;
+        line-height: 16px;
+        color: #ffffff;
+        display: block;
+        padding: 5px 10px;
+        text-transform: uppercase;
+    }
+
+.homelink {
+    color: #E3B873;
+    margin-left: 48px;
+    padding-left: 0px;
+}
+
+.Contactslink {
+    margin-right: 25px;
+}
+
+/*--------------------------------telephone-----------------------------*/
+
+.telephone {
+    display: $flex;
+    color: #E3B873;
+    display: block;
+    font-family: 'FuturaDemiC', Arial, Helvetica, serif;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: right;
+    text-decoration-line: underline;
+    margin-top: 0.36%;
+    margin-right: 24.5px;
+}
+
+.request {
+    display: flex;
+    color: #FFFFFF;
+    font-family: 'FuturaDemiC';
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #E3B873;
+    border-radius: 5px;
+    padding: 10px 33px;
+    margin-top: 0.15%;
+}
+
+.request1 {
+    display: flex;
+    color: #FFFFFF;
+    font-family: 'FuturaDemiC';
+    font-size: 13px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    background: #E3B874;
+    border-radius: 5px;
+    padding: 10px 33px;
+    margin-top: 0.15%;
+    margin-left: 20px;
+}
+
+img-thumbnail:first-child {
+    width: 30%;
+    height: 30%;
+}
